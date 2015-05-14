@@ -53,11 +53,16 @@ function init() {
 	var loader = new THREE.JSONLoader();
 	loader.load("js/models/treehouse_logo.js", function(geometry) {
 		var material = new THREE.MeshLambertMaterial({color: 0x55B663});
-		var mesh = new THREE.Mesh(geometry, material);
+		mesh = new THREE.Mesh(geometry, material);
 		scene.add(mesh);
 	});
 
-	//
+	//add OrbitControls so that we can pan around with the mouse
+	controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+}
+
+//
 
   </script>
 
