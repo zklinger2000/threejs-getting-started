@@ -62,7 +62,15 @@ function init() {
 
 }
 
-//
+//renders the scene and updates the render as needed
+function animate() {
+	//http://www.paulirish.com/
+	requestAnimationFrame(animate);
+
+	//render the scene
+	renderer.render(scene, camera);
+	controls.update();
+}
 
   </script>
 
