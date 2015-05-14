@@ -41,6 +41,16 @@ function init() {
 		camera.updateProjectionMatrix();
 	});
 
+	//set the background color of the scene
+	renderer.setClearColorHex(0x333F47);
+
+	//create a light, set its position, and add it to the scene
+	var light = new THREE.PointLight(0xffffff);
+	light.position.set(-100,200,100);
+	scene.add(light);
+
+	//
+
   </script>
 
 </body>
