@@ -49,6 +49,14 @@ function init() {
 	light.position.set(-100,200,100);
 	scene.add(light);
 
+	//load in the mesh and add it to the scene
+	var loader = new THREE.JSONLoader();
+	loader.load("js/models/treehouse_logo.js", function(geometry) {
+		var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+		var mesh = new THREE.Mesh(geometry, material);
+		scene.add(mesh);
+	});
+
 	//
 
   </script>
